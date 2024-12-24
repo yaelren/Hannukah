@@ -38,9 +38,9 @@ public class sofController : MonoBehaviour
 
     private void FixedUpdate()
     {
-        updateWindDirection();
-        float force = Random.Range(0, 10);
-        rb.AddForce(_windDir * force);
+        // updateWindDirection();
+        // float force = Random.Range(0, 10);
+        // rb.AddForce(_windDir * force);
     }
 
     void updateWindDirection()
@@ -109,7 +109,11 @@ public class sofController : MonoBehaviour
         _windDir = new Vector3(xValue, yValue, zValue);
     }
 
-
- 
+    private void OnCollisionEnter(Collision other)
+    {
+        float bounceForce = 1.2f;
+        rb.AddForce(other.contacts[0].normal * bounceForce, ForceMode.Impulse);
+        
+    }
     
 }

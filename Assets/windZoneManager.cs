@@ -9,8 +9,8 @@ public class WindZoneManager : MonoBehaviour
 
     // [Header("Wind Direction Ranges")] private Vector2 xAxisRange = new Vector2(-0.05f, 0.05f);
     // private Vector2 yAxisRange = new Vector2(0.01f, 0.05f);
-    private Vector2 xAxisRange = new Vector2(-0.08f, 0.08f);
-    private Vector2 yAxisRange = new Vector2(0f, 0.05f);
+    private Vector2 xAxisRange = new Vector2(-1f, 1f);
+    private Vector2 yAxisRange = new Vector2(-6f, 0.05f);
 
     // public int numOfSof;
     public float largeScale;
@@ -28,16 +28,33 @@ public class WindZoneManager : MonoBehaviour
 
     private void FixedUpdate()
     {
+        StickToSides();
+    }
+
+    private void StickToSides()
+    {
+        if (Time.time - _lastUpdateTime > _timeBetweenUpdates)
+        {
+            
+            _lastUpdateTime = Time.time;
+            _timeBetweenUpdates = Random.Range(2f, 5);
+            float xDir = Random.Range(xAxisRange.x, xAxisRange.y)*10;
+            int yDir = Random.Range(0, 2) * 20;
+            _windDir = new Vector3(xDir, yDir, 0);
+        }
+    }
+    
+    private void RandomWind()
+    {
         if (Time.time - _lastUpdateTime > _timeBetweenUpdates)
         {
             _lastUpdateTime = Time.time;
-            _timeBetweenUpdates = Random.Range(0.5f, 2);
+            _timeBetweenUpdates = Random.Range(3f, 15);
             float xDir = Random.Range(xAxisRange.x, xAxisRange.y);
             float yDir = Random.Range(yAxisRange.x, yAxisRange.y);
             _windDir = new Vector3(xDir, yDir, 0);
         }
     }
-
 
     private void spawnSof()
     {
@@ -64,7 +81,7 @@ public class WindZoneManager : MonoBehaviour
             if (rb != null)
             {
                 float force = Random.Range(4f, 20);
-                rb.AddForce(_windDir * force);
+                rb.AddForce(_windDir );
             }
         }
     }

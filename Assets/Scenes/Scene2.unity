@@ -440,9 +440,9 @@ MonoBehaviour:
   _windDir: {x: 0, y: 0.03, z: 0}
   _sofPrefab: {fileID: 5221654824971497453, guid: ab8c3999d2d544e6cbeae2161ff59ca0, type: 3}
   largeScale: 3
-  smallScale: 1
-  numfOfLargeSof: 5
-  numOfSmallSof: 50
+  smallScale: 0.5
+  numfOfLargeSof: 0
+  numOfSmallSof: 800
 --- !u!65 &1121152688
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1190,7 +1190,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1904578477}
   - component: {fileID: 1904578478}
-  - component: {fileID: 1904578479}
   m_Layer: 0
   m_Name: Room
   m_TagString: Untagged
@@ -1208,7 +1207,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -0.11, y: -4.67, z: 0.29}
-  m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
+  m_LocalScale: {x: 0.5, y: 0.5, z: 0.15}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1888666943}
@@ -1231,22 +1230,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0e3eb446a91f747ce8fc60ebd7129a4b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &1904578479
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1904578476}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e1d5e9ac40ad7466bb511e2fd59c1e56, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  sofPrefab: []
-  numOfSof: 0
-  windSpeed: 0
-  sofSpawnRate: 0
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
