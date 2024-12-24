@@ -111,9 +111,9 @@ public class sofController : MonoBehaviour
 
     private void OnCollisionEnter(Collision other)
     {
-        float bounceForce = 1.2f;
-        rb.AddForce(other.contacts[0].normal * bounceForce, ForceMode.Impulse);
-        
+        // float bounceForce = 1.2f;
+        // rb.AddForce(other.contacts[0].normal * bounceForce, ForceMode.Impulse);
+        //
     }
     
 }

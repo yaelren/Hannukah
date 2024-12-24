@@ -38,8 +38,10 @@ public class WindZoneManager : MonoBehaviour
             
             _lastUpdateTime = Time.time;
             _timeBetweenUpdates = Random.Range(2f, 5);
-            float xDir = Random.Range(xAxisRange.x, xAxisRange.y)*10;
-            int yDir = Random.Range(0, 2) * 20;
+            float xForce = 10f;
+            int yForce = 20;
+            float xDir = Random.Range(xAxisRange.x, xAxisRange.y)*xForce;
+            int yDir = Random.Range(0, 2) * yForce;
             _windDir = new Vector3(xDir, yDir, 0);
         }
     }
@@ -80,7 +82,7 @@ public class WindZoneManager : MonoBehaviour
             var rb = hitObject.GetComponent<Rigidbody>();
             if (rb != null)
             {
-                float force = Random.Range(4f, 20);
+                // float force = Random.Range(4f, 20);
                 rb.AddForce(_windDir );
             }
         }
