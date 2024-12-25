@@ -194,7 +194,7 @@ MeshRenderer:
   m_RayTracingAccelStructBuildFlagsOverride: 0
   m_RayTracingAccelStructBuildFlags: 1
   m_SmallMeshCulling: 1
-  m_RenderingLayerMask: 1
+  m_RenderingLayerMask: 3
   m_RendererPriority: 0
   m_Materials:
   - {fileID: 2100000, guid: e6fc6fd66689f4a878569f371b26e206, type: 2}
@@ -398,7 +398,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &927740152
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -415,7 +415,7 @@ MonoBehaviour:
   m_UsePipelineSettings: 1
   m_AdditionalLightsShadowResolutionTier: 2
   m_LightLayerMask: 1
-  m_RenderingLayers: 1
+  m_RenderingLayers: 2
   m_CustomShadowLayers: 0
   m_ShadowLayerMask: 1
   m_ShadowRenderingLayers: 1
@@ -432,8 +432,8 @@ Light:
   m_Enabled: 1
   serializedVersion: 11
   m_Type: 1
-  m_Color: {r: 1, g: 0.95686275, b: 0.8392157, a: 1}
-  m_Intensity: 0
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Intensity: 1.53
   m_Range: 10
   m_SpotAngle: 30
   m_InnerSpotAngle: 21.80208
@@ -471,7 +471,7 @@ Light:
   m_CullingMask:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_RenderingLayerMask: 1
+  m_RenderingLayerMask: 2
   m_Lightmapping: 1
   m_LightShadowCasterMode: 0
   m_AreaSize: {x: 1, y: 1}
@@ -495,13 +495,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 927740151}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.2442358, y: -0.044176843, z: -0.41300872, w: 0.876254}
-  m_LocalPosition: {x: -0.29, y: 4.09, z: -7.12}
+  m_LocalRotation: {x: 0.059357498, y: -0.12793136, z: -0.39517304, w: 0.90771616}
+  m_LocalPosition: {x: -0.29, y: 1.15, z: -7.12}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 23.05, y: -17.661, z: -54.101}
+  m_LocalEulerAnglesHint: {x: 0.381, y: -16.211, z: -47.106}
 --- !u!1 &963194225
 GameObject:
   m_ObjectHideFlags: 0
